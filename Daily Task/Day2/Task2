@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Star List</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ffffff;
+      padding: 60px 0;
+      display: flex;
+      justify-content: center;
+    }
+
+    .list-container {
+      width: 300px;
+    }
+
+    ul.star-list {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul.star-list li {
+      margin: 15px 0;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+
+    ul.star-list li::before {
+      content: "★";
+      color: red;
+      font-size: 24px;
+      margin-right: 12px;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="list-container">
+    <ul class="star-list">
+      <li>Hummus</li>
+      <li>Pita</li>
+      <li>Green salad</li>
+      <li>Halloumi</li>
+    </ul>
+  </div>
+
+</body>
+</html>
