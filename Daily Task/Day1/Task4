@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>List-Task</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 30px auto;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #f9f9f9;
+        }
+
+        .header {
+            background-color: #2e7d32;
+            color: white;
+            padding: 10px 20px;
+            font-weight: bold;
+            width: 150px;
+            clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+            margin-bottom: 20px;
+        }
+
+        .box {
+            border: 1px solid #ccc;
+            background-color: #eaeaea;
+            padding: 15px;
+            margin-bottom: 30px;
+        }
+
+        .email-box {
+            border: 1px solid #666;
+            background-color: white;
+            padding: 15px;
+        }
+
+        a {
+            color: blue;
+            text-decoration: underline;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header">List-Task</div>
+
+    <div class="box">
+        <p>Click any of the following links</p>
+        <a href="https://example.com" target="_blank">Opens in New</a> |
+        <a href="https://example.com" target="_self">Opens in Self</a> |
+        <a href="https://example.com" target="_parent">Opens in Parent</a> |
+        <a href="https://example.com" target="_top">Opens in Body</a>
+    </div>
+
+    <div class="email-box">
+        <h3>Link to an Email Address</h3>
+        <p>
+            To create a link that opens in the user's email program (to let them send a new email), use <code>mailto:</code> inside the attribute:
+        </p>
+        <a href="mailto:someone@example.com">Send email</a>
+    </div>
+
+</body>
+</html>
