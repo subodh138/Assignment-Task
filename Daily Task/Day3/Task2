@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Course Blocks</title>
+  <style>
+    body {
+      background-color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+
+    .container {
+      width: 200px;
+      background: orange;
+      border-radius: 100px 100px 0 0;
+      padding: 20px 0;
+      text-align: center;
+    }
+
+    .block {
+      margin: 10px auto;
+      width: 160px;
+      padding: 15px 0;
+      font-size: 20px;
+      font-weight: bold;
+      font-family: Arial, sans-serif;
+      border-radius: 5px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.3);
+    }
+
+    .mca {
+      background-color: red;
+      color: white;
+    }
+
+    .bca {
+      background-color: yellow;
+      color: black;
+    }
+
+    .bba {
+      background-color: green;
+      color: lime;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="block mca">MCA</div>
+    <div class="block bca">BCA</div>
+    <div class="block bba">BBA</div>
+  </div>
+
+</body>
+</html>
