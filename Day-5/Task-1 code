@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Window</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            height:100vh;
+            background: url('window.jpeg') no-repeat center center/cover;
+            font-family: Arial, sans-serif;
+        }
+        .login-container{
+            position:absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            background-color: rgba(0, 0, 0, 0.75);
+            padding:30px;
+            border-radius: 10px;
+            text-align:center;
+            width:300px;
+            color: #fff;
+        }
+        .login-container img{
+            width:80px;
+            border-radius:50%;
+            margin-bottom:20px;
+        }
+        .login-container h2{
+            margin-bottom: 20px;
+            font-weight: bold;
+        }
+        .login-container input[type="email"],
+        .login-container input[type="password"]{
+            width:90%;
+            padding:10px;
+            margin:10px 0;
+            border:none;
+            border-radius: 5px;
+    }
+    .login-container label{
+        display: block;
+        margin:10px 0;
+        font-size:20px;
+    }
+    .login-container input[type="checkbox"]{
+        margin-right: 5px;
+    }
+    .login-container button{
+        background-color: #00cc44;
+        color:white;
+        padding:10px 30px;
+        border:none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight:bold;
+        font-size: 15px;
+    }
+    .login-container button:hover{
+        background-color: #009933;
+    }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <img src="login.png" alt="Avatar" />
+        <h2>LOGIN WINDOW</h2>
+        <form>
+            <input type="email" placeholder="Your Email Address" required /><br />
+            <input type="password" placeholder="Your Password" required /><br />
+            <label>
+                <input type="checkbox" required />
+                Agree with <a href="#" style="color: #00ccff">Term & Condition</a>
+            </label>    
+            <button type="submit">Login</button>
+        </form>
+    </div>
+</body>
+</html>
