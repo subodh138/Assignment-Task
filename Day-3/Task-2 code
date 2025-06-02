@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Navigation Bar Task</title>
+</head>
+<body>
+
+  <!-- Main Content -->
+  <div style="display: flex; justify-content: space-around; margin-top: 40px; font-family: Arial, sans-serif;">
+
+    <!-- Vertical Navigation Bar -->
+    <div>
+      <h3>Vertical Navigation Bar</h3>
+      <div style="border: 1px solid gray; width: 200px;">
+        <div style="background-color: orange; color: white; padding: 10px;">Home</div>
+        <div style="background-color: lightblue; padding: 10px;">
+          <a href="#" style="display: block; color: blue; text-decoration: none; margin: 5px 0;">Java</a>
+          <a href="#" style="display: block; color: blue; text-decoration: none; margin: 5px 0;">CSS</a>
+          <a href="#" style="display: block; color: blue; text-decoration: none; margin: 5px 0;">HTML</a>
+          <a href="#" style="display: block; color: blue; text-decoration: none; margin: 5px 0;">Bootstrap</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Horizontal Navigation Bar -->
+    <div>
+      <h3>Horizontal Navigation Bar</h3>
+      <div style="border: 1px solid gray; display: flex;">
+        <div style="background-color: gray; padding: 10px 20px; color: white;">Home</div>
+        <a href="#" style="padding: 10px 20px; color: blue; text-decoration: none; border-left: 1px solid blue;">Java</a>
+        <a href="#" style="padding: 10px 20px; color: blue; text-decoration: none; border-left: 1px solid blue;">HTML</a>
+        <a href="#" style="padding: 10px 20px; color: blue; text-decoration: none; border-left: 1px solid blue;">CSS</a>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+</html>
