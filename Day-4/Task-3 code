@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Box Model Diagram</title>
+  <style>
+    body {
+      background: #f9f9f9;
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 50px;
+    }
+
+    h2 {
+      font-size: 28px;
+      margin-bottom: 30px;
+      font-weight: bold;
+    }
+
+    .box-model {
+      display: inline-block;
+      transform: skewY(-5deg);
+      box-shadow: 4px 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .margin {
+      background: #bbb;
+      padding: 20px;
+      transform: skewY(5deg);
+    }
+
+    .border {
+      background: #888;
+      padding: 20px;
+    }
+
+    .padding {
+      background: #ccc;
+      padding: 20px;
+    }
+
+    .content {
+      background: #fff;
+      padding: 20px;
+      font-weight: bold;
+    }
+
+    .label {
+      font-size: 14px;
+      text-align: center;
+      margin: 4px 0;
+    }
+
+    .vertical-label {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      font-size: 14px;
+    }
+
+    .layer {
+      position: relative;
+    }
+
+    /* Labels inside each layer */
+    .margin .label-top { margin-bottom: 10px; }
+    .margin .label-bottom { margin-top: 10px; }
+
+    .border .label-top { margin-bottom: 10px; }
+    .border .label-bottom { margin-top: 10px; }
+
+    .padding .label-top { margin-bottom: 10px; }
+    .padding .label-bottom { margin-top: 10px; }
+
+    .content {
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <h2>CSS Box Model</h2>
+  <div class="box-model">
+    <div class="margin layer">
+      <div class="label label-top">Margin Top</div>
+      <div class="border layer">
+        <div style="display: flex; justify-content: space-between;">
+          <div class="vertical-label">Margin Left</div>
+          <div class="vertical-label">Margin Right</div>
+        </div>
+        <div class="label label-top">Border Top</div>
+        <div class="padding layer">
+          <div class="label label-top">Padding Top</div>
+          <div style="display: flex; justify-content: space-between;">
+            <div class="vertical-label">Padding Left</div>
+            <div class="vertical-label">Padding Right</div>
+          </div>
+          <div class="content">
+            Content
+            <div class="label label-bottom">Padding - Bottom</div>
+          </div>
+        </div>
+        <div class="label label-bottom">Border Bottom</div>
+      </div>
+      <div class="label label-bottom">Margin Bottom</div>
+    </div>
+  </div>
+</body>
+</html>
