@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Nested List Example</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f9f9f9;
+    }
+
+    .container {
+      margin: 60px auto;
+      width: 400px;
+      padding: 20px;
+      border: 1px solid #555;
+      background-color: #fff;
+    }
+
+    ul {
+      text-align: left;
+    }
+
+    ul ul {
+      list-style-type: circle;
+      margin-left: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <p>Lists can be nested (list inside list):</p>
+    <ul>
+      <li>Coffee</li>
+      <li>Tea
+        <ul>
+          <li>Black tea</li>
+          <li>Green tea</li>
+        </ul>
+      </li>
+      <li>Milk</li>
+    </ul>
+  </div>
+
+</body>
+</html>
