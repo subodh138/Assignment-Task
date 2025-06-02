@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Left-Aligned Navbar</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+    }
+
+    .navbar {
+      background-color: black;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+      display: flex;
+      justify-content: flex-start; /* Align items to the left */
+      border-bottom: 4px solid orange;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 16px 30px;
+      display: block;
+      border-right: 1px solid white;
+      font-size: 20px;
+    }
+
+    .navbar a:last-child {
+      border-right: none;
+    }
+
+    .navbar a:hover {
+      background-color: #222;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Product</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+    <a href="#">Users</a>
+    <a href="#">Login</a>
+  </div>
+
+</body>
+</html>
