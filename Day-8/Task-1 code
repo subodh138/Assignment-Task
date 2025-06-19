@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Registration Form</title>
+  <style>
+    .error {
+      color: red;
+      font-size: 14px;
+      margin-left: 10px;
+    }
+    input, textarea {
+      border: 2px solid red;
+      display: block;
+      margin-bottom: 10px;
+    }
+    label {
+      display: inline-block;
+      width: 70px;
+    }
+    .form-group {
+      margin-bottom: 10px;
+    }
+    h2 {
+      text-align: center;
+    }
+    form {
+      width: 300px;
+      margin: auto;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>Registration Form</h2>
+
+  <form id="regForm" onsubmit="return validateForm()">
+    <div class="form-group">
+      <label>Name:</label>
+      <input type="text" id="name" />
+      <span class="error" id="nameError"></span>
+    </div>
+
+    <div class="form-group">
+      <label>Email:</label>
+      <input type="text" id="email" />
+      <span class="error" id="emailError"></span>
+    </div>
+
+    <div class="form-group">
+      <label>Website:</label>
+      <input type="text" id="website" />
+      <span class="error" id="websiteError"></span>
+    </div>
+
+    <div class="form-group">
+      <label>Message:</label>
+      <textarea id="message" rows="4" cols="30"></textarea>
+      <span class="error" id="messageError"></span>
+    </div>
+
+    <button type="submit">Submit</button>
+  </form>
+
+  <script>
+    function validateForm() {
+      let valid = true;
+
+      // Reset errors
+      document.getElementById("nameError").innerText = "";
+      document.getElementById("emailError").innerText = "";
+      document.getElementById("websiteError").innerText = "";
+      document.getElementById("messageError").innerText = "";
+
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const website = document.getElementById("website").value.trim();
+      const message = document.getElementById("message").value.trim();
+
+      const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      const urlRegex = /^(https?:\/\/)?([\w\-]+\.)+[\w\-]+(\/[\w\-./?%&=]*)?$/;
+
+      if (name === "") {
+        document.getElementById("nameError").innerText = "This field is required";
+        valid = false;
+      }
+
+      if (email === "") {
+        document.getElementById("emailError").innerText = "This field is required";
+        valid = false;
+      } else if (!emailRegex.test(email)) {
+        document.getElementById("emailError").innerText = "A valid email address is required";
+        valid = false;
+      }
+
+      if (website === "") {
+        document.getElementById("websiteError").innerText = "This field is required";
+        valid = false;
+      } else if (!urlRegex.test(website)) {
+        document.getElementById("websiteError").innerText = "A valid url is required";
+        valid = false;
+      }
+
+      if (message === "") {
+        document.getElementById("messageError").innerText = "This field is required";
+        valid = false;
+      }
+
+      return valid;
+    }
+  </script>
+
+</body>
+</html>
