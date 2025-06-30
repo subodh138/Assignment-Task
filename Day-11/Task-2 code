@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Alphabetical Order</title>
+  <style>
+    body { font-family: Arial; padding: 30px; background: #f9f9f9; }
+    input, button { padding: 10px; margin: 5px; }
+    .output { margin-top: 10px; font-weight: bold; color: #34495e; }
+  </style>
+</head>
+<body>
+
+  <h2>Exercise 2: Alphabetical Order of Letters</h2>
+  <input type="text" id="strInput" placeholder="Enter a string">
+  <button onclick="sortString()">Sort</button>
+  <div id="result" class="output"></div>
+
+  <script>
+    function sortString() {
+      const input = document.getElementById("strInput").value;
+      if (input.trim() !== "") {
+        const sorted = input.split('').sort().join('');
+        document.getElementById("result").innerText = `Sorted Letters: ${sorted}`;
+      } else {
+        document.getElementById("result").innerText = "Please enter a valid string.";
+      }
+    }
+  </script>
+
+</body>
+</html>
