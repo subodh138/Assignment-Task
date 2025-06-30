@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Save & Load with LocalStorage</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background: #f0f8ff;
+      text-align: center;
+    }
+
+    input {
+      padding: 10px;
+      margin: 10px;
+      width: 200px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    #saveBtn {
+      background-color: #4CAF50;
+      color: white;
+    }
+
+    #loadBtn {
+      background-color: #008CBA;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>User Info</h2>
+
+  <input type="text" id="name" placeholder="Enter Name" /><br>
+  <input type="number" id="age" placeholder="Enter Age" /><br>
+
+  <button id="saveBtn" onclick="saveData()">Save</button>
+  <button id="loadBtn" onclick="loadData()">Load</button>
+
+  <script>
+    function saveData() {
+      const name = document.getElementById("name").value;
+      const age = document.getElementById("age").value;
+
+      // Save to localStorage
+      localStorage.setItem("userName", name);
+      localStorage.setItem("userAge", age);
+
+      alert("Data saved to localStorage!");
+    }
+
+    function loadData() {
+      const name = localStorage.getItem("userName");
+      const age = localStorage.getItem("userAge");
+
+      // Set values back to the input boxes
+      document.getElementById("name").value = name || '';
+      document.getElementById("age").value = age || '';
+
+      alert("Data loaded from localStorage!");
+    }
+  </script>
+
+</body>
+</html>
